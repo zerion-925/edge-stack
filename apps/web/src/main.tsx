@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 import { PwaStatus } from "./components/pwa-status";
 import { env } from "./env";
 import { routeTree } from "./routeTree.gen";
-import "./styles.css";
+import "@edge-stack/ui/globals.css";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { retry: 1, staleTime: 15_000 } },

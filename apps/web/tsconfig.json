@@ -1,6 +1,7 @@
 {
   "extends": "@edge-stack/config/typescript/react.json",
   "compilerOptions": {
+    "paths": { "@/*": ["./src/*"] },
     "types": ["vite/client", "./worker-configuration.d.ts"]
   },
   "include": [

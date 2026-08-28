@@ -1,5 +1,5 @@
 import { createItemSchema, itemSearchSchema } from "@edge-stack/contracts";
-import { Button } from "@edge-stack/ui";
+import { Button } from "@edge-stack/ui/components/button";
 import { useForm } from "@tanstack/react-form";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
@@ -47,8 +47,8 @@ function ItemsPage() {
         </div>
         <Button
           aria-label={`Use ${density === "compact" ? "comfortable" : "compact"} density`}
-          className="secondary"
           onClick={toggleDensity}
+          variant="outline"
         >
           {density === "compact" ? "Roomy" : "Compact"}
         </Button>

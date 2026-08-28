@@ -18,12 +18,52 @@
       "linter": { "rules": { "performance": { "noJsxPropsBind": "off" } } }
     },
     {
-      "includes": ["packages/ui/src/index.ts", "workers/api/src/index.ts"],
+      "includes": ["workers/api/src/index.ts"],
       "linter": { "rules": { "performance": { "noBarrelFile": "off" } } }
     },
     {
-      "includes": ["apps/web/src/styles.css"],
+      "includes": ["packages/ui/src/styles/globals.css"],
       "linter": { "rules": { "style": { "noDescendingSpecificity": "off" } } }
+    },
+    {
+      "includes": [
+        "packages/ui/src/components/**/*.tsx",
+        "packages/ui/src/hooks/**/*.ts"
+      ],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "noNoninteractiveElementInteractions": "off",
+            "useAriaPropsForRole": "off",
+            "useFocusableInteractive": "off",
+            "useKeyWithClickEvents": "off",
+            "useSemanticElements": "off"
+          },
+          "complexity": { "noExcessiveCognitiveComplexity": "off" },
+          "correctness": {
+            "noNestedComponentDefinitions": "off",
+            "useExhaustiveDependencies": "off"
+          },
+          "performance": {
+            "noJsxPropsBind": "off",
+            "noNamespaceImport": "off"
+          },
+          "security": { "noDangerouslySetInnerHtml": "off" },
+          "style": {
+            "noExportedImports": "off",
+            "noNestedTernary": "off",
+            "useConsistentTypeDefinitions": "off",
+            "useDestructuring": "off"
+          },
+          "suspicious": {
+            "noArrayIndexKey": "off",
+            "noDocumentCookie": "off",
+            "noLeakedRender": "off",
+            "noShadow": "off",
+            "noUnnecessaryConditions": "off"
+          }
+        }
+      }
     }
   ]
 }

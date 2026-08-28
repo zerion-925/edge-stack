@@ -1,5 +1,5 @@
 import { useRegisterSW } from "virtual:pwa-register/react";
-import { Button } from "@edge-stack/ui";
+import { Button } from "@edge-stack/ui/components/button";
 import { useCallback, useEffect, useState } from "react";
 
 export function PwaStatus() {
@@ -52,7 +52,7 @@ export function PwaStatus() {
       <div className="pwa-actions">
         {needRefresh ? <Button onClick={installUpdate}>Reload</Button> : null}
         {isOnline ? (
-          <Button className="secondary" onClick={dismiss}>
+          <Button onClick={dismiss} variant="outline">
             {needRefresh ? "Later" : "Dismiss"}
           </Button>
         ) : null}

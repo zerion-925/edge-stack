@@ -1,4 +1,4 @@
-import { Button } from "@edge-stack/ui";
+import { Button } from "@edge-stack/ui/components/button";
 import { render, screen } from "@testing-library/react";
 import { HttpResponse, http } from "msw";
 import { setupServer } from "msw/node";

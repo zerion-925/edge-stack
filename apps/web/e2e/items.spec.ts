@@ -9,7 +9,7 @@ test("search URL and create form work", async ({ page }) => {
   ).toBeVisible();
   await page.getByRole("searchbox").fill("Hono");
   await expect(page).toHaveURL(honoQuery);
-  await expect(page.getByText("Hono RPC")).toBeVisible();
+  await expect(page.getByText("Hono RPC", { exact: true })).toBeVisible();
   await page.getByRole("searchbox").fill("");
   await page.getByLabel("Name").fill("Durable Objects");
   await page.getByRole("button", { name: "Add item" }).click();
