@@ -7,7 +7,7 @@
     "build": "vite build",
     "cf-typegen": "wrangler types",
     "cf-typegen:check": "wrangler types --check",
-    "dev": "portless vite",
+    "dev": "portless edge-stack vite",
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
