@@ -1,0 +1,1 @@
+{ "extends": "@edge-stack/config/typescript/base.json", "include": ["src"] }

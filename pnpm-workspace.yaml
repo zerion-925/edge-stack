@@ -1,0 +1,39 @@
+packages:
+  - apps/*
+  - packages/*
+  - workers/*
+
+allowBuilds:
+  esbuild: true
+  msw: true
+  workerd: true
+
+catalog:
+  "@t3-oss/env-core": 0.13.11
+  neverthrow: 8.2.0
+  typescript: 7.0.2
+  vitest: 4.1.11
+  wrangler: 4.127.0
+  zod: 4.4.3
+
+minimumReleaseAgeExclude:
+  - '@biomejs/biome@2.5.11'
+  - '@biomejs/cli-darwin-arm64@2.5.11'
+  - '@biomejs/cli-darwin-x64@2.5.11'
+  - '@biomejs/cli-linux-arm64-musl@2.5.11'
+  - '@biomejs/cli-linux-arm64@2.5.11'
+  - '@biomejs/cli-linux-x64-musl@2.5.11'
+  - '@biomejs/cli-linux-x64@2.5.11'
+  - '@biomejs/cli-win32-arm64@2.5.11'
+  - '@biomejs/cli-win32-x64@2.5.11'
+  - '@tanstack/query-core@5.102.8'
+  - '@tanstack/query-devtools@5.102.8'
+  - '@tanstack/react-query-devtools@5.102.8'
+  - '@tanstack/react-query@5.102.8'
+  - '@vitejs/plugin-react@6.1.1'
+
+onlyBuiltDependencies:
+  - "@biomejs/biome"
+  - esbuild
+  - sharp
+  - workerd

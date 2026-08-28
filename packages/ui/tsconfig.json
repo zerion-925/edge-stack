@@ -1,0 +1,1 @@
+{ "extends": "@edge-stack/config/typescript/react.json", "include": ["src"] }

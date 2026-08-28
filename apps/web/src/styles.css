@@ -1,0 +1,231 @@
+@import "tailwindcss";
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  color: oklch(28% 0.025 165);
+  background: oklch(97% 0.012 155);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  min-width: 320px;
+  margin: 0;
+}
+button,
+input {
+  font: inherit;
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid oklch(67% 0.14 160 / 35%);
+  outline-offset: 2px;
+}
+.shell {
+  width: min(760px, calc(100% - 32px));
+  padding: 48px 0 32px;
+  margin: 0 auto;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid oklch(86% 0.018 160);
+}
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+h1 {
+  margin-bottom: 0;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+h2 {
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+}
+.eyebrow {
+  margin-bottom: 4px;
+  font-size: 0.72rem;
+  font-weight: 750;
+  color: oklch(48% 0.13 160);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+section {
+  padding-top: 40px;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+.intro p {
+  color: oklch(49% 0.025 165);
+}
+.field-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+input {
+  width: 100%;
+  padding: 11px 13px;
+  color: inherit;
+  background: oklch(99% 0.006 155);
+  border: 1px solid oklch(79% 0.025 160);
+  border-radius: 9px;
+}
+.items {
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+  border-top: 1px solid oklch(88% 0.016 160);
+}
+.items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 4px;
+  border-bottom: 1px solid oklch(88% 0.016 160);
+}
+.items.compact li {
+  padding-block: 10px;
+}
+.items time {
+  font-size: 0.82rem;
+  color: oklch(54% 0.025 165);
+}
+.ui-button {
+  padding: 10px 15px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background: oklch(47% 0.13 160);
+  border: 1px solid oklch(47% 0.13 160);
+  border-radius: 9px;
+}
+.ui-button:hover {
+  background: oklch(42% 0.13 160);
+}
+.ui-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+.ui-button.secondary {
+  color: oklch(40% 0.1 160);
+  background: transparent;
+}
+.create-section {
+  margin-top: 28px;
+  border-top: 1px solid oklch(86% 0.018 160);
+}
+.create-section form {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.create-section button {
+  margin-top: 25px;
+  white-space: nowrap;
+}
+.field-grow {
+  flex: 1;
+}
+.error,
+.field-error {
+  color: oklch(48% 0.18 28);
+}
+.field-error {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+}
+.empty {
+  margin-top: 18px;
+  color: oklch(52% 0.03 165);
+}
+.skeletons {
+  margin-top: 18px;
+}
+.skeletons span {
+  display: block;
+  height: 55px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(92% 0.018 160),
+    transparent
+  );
+  border-bottom: 1px solid oklch(88% 0.016 160);
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding-top: 18px;
+  margin-top: 48px;
+  font-size: 0.72rem;
+  color: oklch(52% 0.03 165);
+  border-top: 1px solid oklch(86% 0.018 160);
+}
+.pwa-status {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  z-index: 20;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  width: min(680px, calc(100% - 40px));
+  padding: 16px 18px;
+  margin-inline: auto;
+  color: oklch(28% 0.025 165);
+  background: oklch(99% 0.006 155);
+  border: 1px solid oklch(76% 0.04 160);
+  border-radius: 12px;
+  box-shadow: 0 12px 36px oklch(28% 0.025 165 / 16%);
+}
+.pwa-status strong {
+  display: block;
+  margin-bottom: 3px;
+}
+.pwa-status p {
+  margin-bottom: 0;
+  color: oklch(45% 0.025 165);
+}
+.pwa-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+@media (max-width: 560px) {
+  .shell {
+    padding-top: 28px;
+  }
+  .create-section form {
+    display: block;
+  }
+  .create-section button {
+    width: 100%;
+    margin-top: 12px;
+  }
+  .pwa-status {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+  }
+  .pwa-actions .ui-button {
+    flex: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  button,
+  input,
+  li {
+    transition: 180ms ease;
+  }
+}

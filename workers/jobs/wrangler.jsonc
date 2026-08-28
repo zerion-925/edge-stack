@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "edge-stack-jobs",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-28",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": { "APP_ENV": "development" },
+  "queues": { "consumers": [{ "queue": "edge-stack-items" }] },
+  "triggers": { "crons": ["0 * * * *"] }
+}

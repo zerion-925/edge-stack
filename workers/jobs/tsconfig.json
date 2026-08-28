@@ -1,0 +1,7 @@
+{
+  "extends": "@edge-stack/config/typescript/worker.json",
+  "compilerOptions": {
+    "types": ["./worker-configuration.d.ts", "@cloudflare/vitest-plugin/types"]
+  },
+  "include": ["src", "test", "vite.config.ts", "vitest.config.ts"]
+}

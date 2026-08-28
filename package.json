@@ -1,0 +1,30 @@
+{
+  "name": "edge-stack",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A lean Cloudflare-first React monorepo template",
+  "scripts": {
+    "build": "turbo build",
+    "cf-typegen": "turbo cf-typegen",
+    "cf-typegen:check": "turbo cf-typegen:check",
+    "check": "ultracite check",
+    "dev": "turbo dev",
+    "fix": "ultracite fix",
+    "knip": "knip",
+    "test": "turbo test",
+    "test:e2e": "pnpm --filter @edge-stack/web test:e2e",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.11",
+    "knip": "6.32.3",
+    "turbo": "2.10.12",
+    "typescript": "7.0.2",
+    "ultracite": "7.10.7"
+  },
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=24 <25",
+    "pnpm": ">=11 <12"
+  }
+}

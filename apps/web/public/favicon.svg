@@ -1,0 +1,5 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <title>Edge Stack</title>
+  <rect fill="#087f5b" height="64" rx="14" width="64" />
+  <path d="M18 19h29v8H27v7h17v8H27v7h21v8H18z" fill="white" />
+</svg>

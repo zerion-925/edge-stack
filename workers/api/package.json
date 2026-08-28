@@ -1,0 +1,33 @@
+{
+  "name": "@edge-stack/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/app.ts"
+  },
+  "scripts": {
+    "build": "vite build",
+    "cf-typegen": "wrangler types",
+    "cf-typegen:check": "wrangler types --check",
+    "dev": "vite dev",
+    "test": "vitest run",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@edge-stack/contracts": "workspace:*",
+    "@t3-oss/env-core": "catalog:",
+    "hono": "4.13.5",
+    "neverthrow": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.54.1",
+    "@cloudflare/vitest-plugin": "1.1.1",
+    "@edge-stack/config": "workspace:*",
+    "typescript": "catalog:",
+    "vite": "8.2.2",
+    "vitest": "catalog:",
+    "wrangler": "catalog:"
+  }
+}

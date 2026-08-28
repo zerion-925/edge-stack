@@ -1,0 +1,13 @@
+{
+  "name": "@edge-stack/config",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    "./typescript/base.json": "./typescript/base.json",
+    "./typescript/react.json": "./typescript/react.json",
+    "./typescript/worker.json": "./typescript/worker.json"
+  },
+  "files": [
+    "typescript"
+  ]
+}

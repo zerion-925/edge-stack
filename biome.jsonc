@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core", "ultracite/biome/react"],
+  "files": {
+    "includes": [
+      "!**/dist",
+      "!**/coverage",
+      "!**/node_modules",
+      "!apps/web/src/routeTree.gen.ts",
+      "!**/worker-configuration.d.ts",
+      "!playwright-report",
+      "!test-results"
+    ]
+  },
+  "overrides": [
+    {
+      "includes": ["apps/web/src/routes/**/*.tsx"],
+      "linter": { "rules": { "performance": { "noJsxPropsBind": "off" } } }
+    },
+    {
+      "includes": ["packages/ui/src/index.ts", "workers/api/src/index.ts"],
+      "linter": { "rules": { "performance": { "noBarrelFile": "off" } } }
+    },
+    {
+      "includes": ["apps/web/src/styles.css"],
+      "linter": { "rules": { "style": { "noDescendingSpecificity": "off" } } }
+    }
+  ]
+}
