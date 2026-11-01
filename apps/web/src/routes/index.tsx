@@ -3,6 +3,7 @@ import { Button } from "@edge-stack/ui/components/button";
 import { useForm } from "@tanstack/react-form";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
+import { AnimatedIconDemo } from "../components/animated-icon-demo";
 import { addItem, listItems } from "../lib/api";
 import { useDensity } from "../lib/density";
 
@@ -154,6 +155,7 @@ function ItemsPage() {
           </p>
         ) : null}
       </section>
+      <AnimatedIconDemo />
       <footer>
         <span>Router owns URL state</span>
         <span>Query owns server state</span>

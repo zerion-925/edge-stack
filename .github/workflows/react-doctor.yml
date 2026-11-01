@@ -1,9 +1,9 @@
 name: React Doctor
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+    types: [ opened, synchronize, reopened, ready_for_review ]
   push:
-    branches: [main]
+    branches: [ main ]
 permissions:
   contents: read
   pull-requests: write
@@ -16,7 +16,7 @@ jobs:
   react-doctor:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
-      - uses: millionco/react-doctor@v2
+      - uses: millionco/react-doctor@v2.4.0

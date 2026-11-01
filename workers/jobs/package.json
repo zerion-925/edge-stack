@@ -16,11 +16,11 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.54.1",
-    "@cloudflare/vitest-plugin": "1.1.1",
+    "@cloudflare/vite-plugin": "1.66.0",
+    "@cloudflare/vitest-plugin": "1.4.11",
     "@edge-stack/config": "workspace:*",
     "typescript": "catalog:",
-    "vite": "8.2.2",
+    "vite": "8.3.5",
     "vitest": "catalog:",
     "wrangler": "catalog:"
   }
