@@ -17,7 +17,7 @@ cleanupOutdatedCaches();
 
 registerRoute(
   new NavigationRoute(createHandlerBoundToURL("index.html"), {
-    denylist: [/^\/api(?:\/|$)/],
+    denylist: [/^\/api(?:\/|$)/u],
   })
 );
 

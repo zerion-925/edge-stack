@@ -4,7 +4,7 @@ A lean Cloudflare-first React monorepo that proves one vertical slice: URL-backe
 
 ## Stack
 
-- pnpm 11 workspaces, Turbo 2, Node 24, strict TypeScript
+- pnpm 12 workspaces, Turbo 2, Node 24, strict TypeScript
 - React 19, Vite 8, Tailwind 4, TanStack Router/Query/Form, Zustand
 - Hono RPC, Zod contracts, neverthrow expected errors
 - Cloudflare Workers for the web BFF, API, queue, and scheduled work
@@ -42,6 +42,42 @@ Portless prints the stable local URL. The web Worker handles `/api/*`, removes t
 - `pnpm test:e2e` — Playwright Chromium flow
 - `pnpm cf-typegen` — regenerate Wrangler bindings
 - `pnpm cf-typegen:check` — verify Wrangler bindings without changing files
+
+## Animated icons
+
+The demo uses [AnimateIcons](https://animateicons.in/icons/docs/shadcn), copied
+through its official shadcn registry. Only the Sparkles icon is included; the
+full icon catalog and `@animateicons/react` package are not installed. Existing
+static Lucide icons and public shadcn component APIs are preserved. The copied icon needs
+`motion` (currently 14.9.0) in `packages/ui`.
+
+```tsx
+import { SparklesIcon } from "@edge-stack/ui/components/sparkles-icon";
+
+// Decorative next to visible text (the default).
+<SparklesIcon aria-hidden="true" size={20} />;
+// Meaningful standalone icon.
+<SparklesIcon aria-label="New features" size={24} />;
+```
+
+Hover plays the icon. For a button, pass a `SparklesIconHandle` ref and call
+`startAnimation()` / `stopAnimation()` on focus/blur and pointer enter/leave;
+see `apps/web/src/components/animated-icon-demo.tsx`. The example also plays
+on activation. Reduced-motion preferences prevent animated transforms.
+
+To copy another individual icon into the shared UI package:
+
+```sh
+corepack pnpm --filter @edge-stack/ui exec shadcn add @animateicons/lu-bell-ring
+```
+
+Choose the exact `lu-*` / `hu-*` identifier from the official gallery. The
+registry is configured in `packages/ui/components.json`; generated files use
+the existing shared `cn` utility. Review generated code against the strict
+React 19/TypeScript settings, preserve its accessibility and reduced-motion
+guards, then run the usual checks. Do not use `--all` to add the whole catalog.
+AnimateIcons is MIT; the copied-source and underlying icon notices are retained
+in `packages/ui/ANIMATED_ICONS_LICENSE.md`.
 
 ## Packages
 

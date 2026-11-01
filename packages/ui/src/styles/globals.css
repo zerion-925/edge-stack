@@ -84,6 +84,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  font-family: Inter, system-ui, sans-serif;
+  font-synthesis: none;
+  color: oklch(28% 0.025 165);
+  background: oklch(97% 0.012 155);
 }
 
 .dark {
@@ -132,17 +136,17 @@
   }
 }
 
-/* Edge Stack example application styles. */
-:root {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-synthesis: none;
-  color: oklch(28% 0.025 165);
-  background: oklch(97% 0.012 155);
+@supports (font-family: ui-sans-serif) {
+  :is(:root) {
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
 }
-* {
+
+/* Edge Stack example application styles. */
+:is(*) {
   box-sizing: border-box;
 }
-body {
+:is(body) {
   min-width: 320px;
   margin: 0;
   background: oklch(97% 0.012 155);

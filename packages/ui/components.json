@@ -16,5 +16,8 @@
     "hooks": "@edge-stack/ui/hooks",
     "lib": "@edge-stack/ui/lib",
     "ui": "@edge-stack/ui/components"
+  },
+  "registries": {
+    "@animateicons": "https://animateicons.in/r/{name}.json"
   }
 }

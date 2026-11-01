@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const honoQuery = /q=Hono/;
+const honoQuery = /q=Hono/u;
 
 test("search URL and create form work", async ({ page }) => {
   await page.goto("/");
